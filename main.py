@@ -2,7 +2,7 @@ import cv2 as cv
 import glob
 import os
 
-path = os.getcwd() + '\AISC\CHALLENGE OF THE WEEK\OpenCV Image Processing Challenge\\assets'
+path = os.getcwd() + '\AISC\CHALLENGE OF THE WEEK\OpenCV Image Compressor\\assets'
 os.chdir(path)
 images = glob.glob('*.jpg')
 folder = 'resized images'
