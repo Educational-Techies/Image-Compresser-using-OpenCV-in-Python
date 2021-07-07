@@ -2,7 +2,7 @@ import cv2 as cv
 import glob
 import os
 
-path = os.getcwd() + '\AISC\CHALLENGE OF THE WEEK\week 17-21 may\\assets'
+path = os.getcwd() + '\AISC\CHALLENGE OF THE WEEK\OpenCV Image Processing Challenge\\assets'
 os.chdir(path)
 images = glob.glob('*.jpg')
 folder = 'resized images'
@@ -17,7 +17,7 @@ for image in images:
        
     cv.imshow('Checking...Images',resized)
     
-    cv.waitKey(2500)
+    cv.waitKey(0)
     cv.destroyAllWindows()
     
     
