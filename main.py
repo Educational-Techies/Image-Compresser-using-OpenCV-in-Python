@@ -1,9 +1,9 @@
-import cv2 as cv
+import cv2 
 import glob
 import os
 
-path = os.getcwd() + '\AISC\CHALLENGE OF THE WEEK\OpenCV Image Compressor\\assets'
-os.chdir(path)
+path = os.getcwd() + r'\CHALLENGE OF THE WEEK\OpenCV Image Compresor\assets' 
+os.chdir(path)  
 images = glob.glob('*.jpg')
 folder = 'resized images'
 if not os.path.exists(folder):
@@ -11,17 +11,18 @@ if not os.path.exists(folder):
 
 
 for image in images:
-    img=cv.imread(image,1)
+    img=cv2.imread(image,1)
     
-    resized=cv.resize(img,(int(img.shape[1]/8),int(img.shape[0]/8)))
-       
-    cv.imshow('Checking...Images',resized)
+    re=cv2.resize(img,(int(img.shape[1]/8),int(img.shape[0]/8)))
     
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+    cv2.imshow('Checking...',re)
     
+ 
+    cv2.waitKey(500)
+    cv2.destroyAllWindows()
     
-    cv.imwrite(folder + '/' + 'resized_'+image, resized)
+    cv2.imwrite(folder + '/' + 'resized_'+image, re)
+         
 
 path = os.getcwd()
 os.chdir(path)
