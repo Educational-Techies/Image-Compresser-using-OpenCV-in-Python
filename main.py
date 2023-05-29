@@ -1,3 +1,7 @@
+pip install opencv-python
+pip install glob
+pip install os
+
 import cv2 
 import glob
 import os
